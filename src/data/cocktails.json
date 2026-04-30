@@ -1,0 +1,64 @@
+[
+  {
+    "name": "Orange Gin Fizz",
+    "bases": [
+      "Gin"
+    ],
+    "ingredients": [
+      "2 oz Gin",
+      "1/2 oz Cointreau",
+      "1 oz Fresh Orange Juice",
+      "3 oz Tonic Water"
+    ],
+    "instructions": "Shake the gin, Cointreau, and orange juice with ice. Strain into a glass over fresh ice and top with the tonic water.",
+    "notes": "",
+    "noteAuthor": "Both"
+  },
+  {
+    "name": "Lemon Cadillac Margarita",
+    "bases": [
+      "Tequila"
+    ],
+    "ingredients": [
+      "2 oz Tequila",
+      "1 oz Fresh Lemon Juice",
+      "1/2 oz Cointreau",
+      "1/4 oz Simple Syrup (optional)",
+      "1/2 oz Grand Marnier (for the float)"
+    ],
+    "instructions": "Shake everything except the Grand Marnier with ice. Strain into a chilled glass and gently pour the Grand Marnier over the back of a spoon to create the float.",
+    "notes": "",
+    "noteAuthor": "Both"
+  },
+  {
+    "name": "Rhubarb & Rose Cocktail",
+    "bases": [
+      "Gin"
+    ],
+    "ingredients": [
+      "2½ oz Empress 1908 Elderflower Rose Gin",
+      "2 oz Rhubarb & Rose Syrup",
+      "2-3 Strawberries, diced",
+      "Soda Water, to top"
+    ],
+    "instructions": "Muddle the diced strawberries in a Collins glass. Add the gin and the rhubarb & rose syrup. Stir to combine. Add ice and top with soda water. Garnish with rose petals and rhubarb ribbons.",
+    "notes": "We made it once with regular Empress gin and regular syrup with rose petals in it. Still pretty good.",
+    "noteAuthor": "Hua"
+  },
+  {
+    "name": "The Plum Citrus Spark",
+    "bases": [
+      "Gin",
+      "Umeshu"
+    ],
+    "ingredients": [
+      "2 oz Choya Umeshu",
+      "1 oz Empress Gin",
+      "2 oz Grapefruit Juice",
+      "Splash of Cointreau"
+    ],
+    "instructions": "Shake with ice and strain into a chilled glass. This creates a rounded, fruity drink where the tartness cuts the sweetness.",
+    "notes": "Great with Japanese curry and Hua's mushrooms & Taiwan cabbage miso soup!",
+    "noteAuthor": "Pha"
+  }
+]
