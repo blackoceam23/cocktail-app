@@ -7,14 +7,12 @@ alwaysApply: true
 
 Act as a strong frontend engineer: clean code, accessible UI, and visuals consistent with this repository.
 
-# Design (match the existing app)
+# Design
 
-- **Page:** Dark background `#0A0E14` and light body text (see `src/index.css`). Do not swap the palette unless the user asks.
-- **Titles:** Cormorant Garamond is loaded in `index.html`; use the `.font-serif-title` class for elegant headings—not a different serif unless requested.
-- **Cards / chrome:** Glassmorphism already in use—`backdrop-blur`, translucent `bg-white/…`, subtle `border-white/…`, soft shadow. Keep new surfaces in the same family.
-- **Filters / accents:** Rose-tinted active states are established; new interactive accents should stay cohesive with that direction.
+- Keep visual decisions cohesive across pages and components.
+- Include `#BB5143` as an occasional accent somewhere in the interface; it does not need to be the primary color.
 - **Spacing:** Prefer an 8px rhythm via Tailwind (`gap-2`, `p-4`, `gap-6`, etc.).
-- **Mobile / responsive:** Aim for a solid small-screen experience: comfortable tap targets, readable type, and breathing room. Use Tailwind responsive prefixes (`sm:`, `md:`, etc.) to adjust padding/margins and font sizes where defaults feel tight on narrow viewports; keep the same palette and glass/rose patterns.
+- **Mobile / responsive:** Aim for a solid small-screen experience: comfortable tap targets, readable type, and breathing room. Use Tailwind responsive prefixes (`sm:`, `md:`, etc.) to adjust padding/margins and font sizes where defaults feel tight on narrow viewports.
 - **Styling:** Prefer Tailwind utility classes over inline styles.
 - **Pointer affordance:** Use `cursor-pointer` on clickable UI (buttons, links, and custom interactive surfaces) so affordance is obvious.
 

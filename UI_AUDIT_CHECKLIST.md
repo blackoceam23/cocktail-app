@@ -11,10 +11,8 @@ Use this quick pass before merging UI changes.
 
 ## Visual Consistency
 
-- [ ] Page background remains dark (`#0A0E14`) with light text.
-- [ ] Titles use `.font-serif-title` (Cormorant Garamond).
-- [ ] New cards/surfaces follow existing glassmorphism style (`backdrop-blur`, translucent backgrounds, subtle borders/shadows).
-- [ ] Interactive accent colors stay aligned with the rose-tinted system.
+- [ ] Visual choices are consistent across screens and components.
+- [ ] `#BB5143` appears as an accent in at least some interface elements (it does not need to be the primary color).
 
 ## Layout and Responsiveness
 

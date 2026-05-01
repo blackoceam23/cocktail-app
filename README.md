@@ -1,6 +1,6 @@
 # Cocktail App
 
-A Vite + React cocktail recipe app with a dark, glassmorphism-inspired UI.
+A Vite + React cocktail recipe app for browsing, filtering, and managing cocktail recipes.
 
 ## Features
 
@@ -54,7 +54,7 @@ Project UI and engineering conventions are documented in:
 
 - `.cursor/rules/cocktail-app.mdc`
 
-Use this for visual consistency (dark palette, serif title styling, glass surfaces, rose accents), accessibility affordance (`cursor-pointer` on clickable surfaces), and component/hook guidance.
+Use this for accessibility affordance (`cursor-pointer` on clickable surfaces), component/hook guidance, and current visual direction including occasional `#BB5143` accent usage.
 
 ## Quality Checks
 

@@ -28,7 +28,7 @@ Follow conventions in `.cursor/rules/cocktail-app.mdc`.
 Key requirements:
 
 - Use Tailwind utility classes over inline styles where practical.
-- Keep visuals aligned with the app's existing dark + glass + rose style system.
+- Keep visuals aligned with the current project style guidance in `.cursor/rules/cocktail-app.mdc`.
 - Add `cursor-pointer` to clickable UI controls and interactive surfaces.
 - Use functional components and hooks; memoize derived collections with `useMemo` where relevant.
 - Split components when files grow past roughly 100 lines, especially under `src/components`.
