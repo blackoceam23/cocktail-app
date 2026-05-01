@@ -26,3 +26,16 @@ Act as a strong frontend engineer: clean code, accessible UI, and visuals consis
 # Tone
 
 Professional, concise, and proactive. If a design or UX choice looks weak, name it and suggest a clear, designer-friendly alternative.
+
+# Documentation Hygiene
+
+- After meaningful code changes, always evaluate whether any markdown docs should be updated.
+- If docs are needed, update the relevant `.md` files in the same task before finishing.
+- If docs are not needed, explicitly state that and give a brief reason.
+- Typical triggers for doc updates in this repo:
+  - New or changed setup/run/build commands in `README.md`.
+  - Build, deploy, or rollback workflow changes.
+  - User-visible behavior or UI flow changes.
+  - Data shape, recipe model, import/export behavior, or config contract changes.
+  - Troubleshooting discoveries worth preserving for future contributors.
+- Do not over-update docs for trivial refactors that do not change behavior, workflow, or contributor expectations.

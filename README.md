@@ -63,8 +63,56 @@ There is currently no `lint` npm script in this repository.
 Before shipping changes:
 
 - Run `npm run build` to catch compile-time issues.
+- Run `npm run docs:check` when code/config behavior may require markdown updates.
 - Manually verify key UI flows (filtering, modal open/close, recipe add, export behavior).
 - Use `UI_AUDIT_CHECKLIST.md` for consistent UI review.
+
+### Docs Awareness Check
+
+`npm run docs:check` compares the latest change range and fails when high-signal code/config files change without any markdown updates.
+
+Examples of high-signal paths:
+
+- `package.json`, lockfiles, and workflow files
+- `index.html` and Vite config
+- `src/App.*`, `src/components/**`, `src/data/**`, `src/lib/**`
+
+Use this as a docs drift reminder. If docs intentionally do not change, include a brief rationale in your PR notes.
+
+### CI Rollout Policy
+
+The `Docs Awareness` workflow currently runs in warning mode (non-blocking) on pull requests.
+
+- Phase 1: keep warning mode for 1-2 weeks while tuning false positives.
+- Phase 2: promote to blocking by removing `continue-on-error` in `.github/workflows/docs-awareness.yml`.
+
+## Deployment + Rollback
+
+### Netlify Deployment
+
+- Repository: `https://github.com/blackoceam23/cocktail-app.git`
+- Build command: `npm run build`
+- Publish directory: `dist`
+- Netlify should auto-deploy when new commits are pushed to `main`.
+
+### First-Time Git Setup
+
+Run these once from the project root:
+
+```bash
+git init
+git add .
+git commit -m "Initial cocktail app"
+git branch -M main
+git remote add origin https://github.com/blackoceam23/cocktail-app.git
+git push -u origin main
+```
+
+### Rollback Quick Guide
+
+- Preferred on shared history: `git revert <commit_sha>`
+- Push the revert commit to trigger a Netlify redeploy.
+- Avoid `git reset --hard` on shared branches unless you intentionally want to rewrite history.
 
 ## UI Decisions
 

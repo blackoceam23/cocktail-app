@@ -1,0 +1,33 @@
+name: Docs Awareness
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  docs-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run docs awareness check (warning mode)
+        id: docs_check
+        continue-on-error: true
+        run: npm run docs:check
+
+      - name: Emit warning guidance
+        if: steps.docs_check.outcome == 'failure'
+        run: |
+          echo "::warning title=Docs review recommended::High-signal code/config changes were detected without markdown updates. Add docs updates or explain why docs are unchanged."
