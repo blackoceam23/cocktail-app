@@ -87,7 +87,7 @@ export default function AddCocktailModal({ open, onClose, onSave, existingNames 
   return (
     <div
       className={[
-        "fixed inset-0 z-50 flex items-center justify-center bg-black/65 p-4 backdrop-blur-sm transition-opacity",
+        "fixed inset-0 z-50 flex items-center justify-center bg-[radial-gradient(circle_at_top,rgba(187,81,67,0.16),rgba(0,0,0,0.82)_48%)] p-4 transition-opacity",
         isBackdropVisible
           ? "opacity-100 duration-[180ms] ease-out"
           : "opacity-0 duration-[180ms] ease-in",

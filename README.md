@@ -6,7 +6,7 @@ A Vite + React cocktail recipe app for browsing, filtering, and managing cocktai
 
 - Browse built-in cocktail recipes.
 - Filter cocktails by base spirit.
-- Open detailed recipe modals for ingredients and instructions.
+- Open detailed recipe modals for ingredients and instructions (base spirit is used for filtering and may also appear in the ingredient list).
 - Add custom recipes stored in browser local storage.
 - Export built-in + custom recipes to JSON.
 
