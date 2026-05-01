@@ -73,18 +73,11 @@ Before shipping changes:
 
 Examples of high-signal paths:
 
-- `package.json`, lockfiles, and workflow files
+- `package.json` and lockfiles
 - `index.html` and Vite config
 - `src/App.*`, `src/components/**`, `src/data/**`, `src/lib/**`
 
 Use this as a docs drift reminder. If docs intentionally do not change, include a brief rationale in your PR notes.
-
-### CI Rollout Policy
-
-The `Docs Awareness` workflow currently runs in warning mode (non-blocking) on pull requests.
-
-- Phase 1: keep warning mode for 1-2 weeks while tuning false positives.
-- Phase 2: promote to blocking by removing `continue-on-error` in `.github/workflows/docs-awareness.yml`.
 
 ## Deployment + Rollback
 

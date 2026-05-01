@@ -52,7 +52,6 @@ const highSignalPatterns = [
   /^src\/lib\//,
   /^index\.html$/,
   /^netlify\.toml$/,
-  /^\.github\/workflows\//,
 ];
 
 if (!hasGit()) {
