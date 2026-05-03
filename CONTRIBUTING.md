@@ -23,12 +23,12 @@ npm run preview
 
 ## Project Standards
 
-Follow conventions in `.cursor/rules/cocktail-app.mdc`.
+Follow engineering conventions in `.cursor/rules/cocktail-app.mdc` and the visual contract in `design.md`.
 
 Key requirements:
 
 - Use Tailwind utility classes over inline styles where practical.
-- Keep visuals aligned with the current project style guidance in `.cursor/rules/cocktail-app.mdc`.
+- Keep UI aligned with `.cursor/rules/cocktail-app.mdc` (defaults, spacing, affordance) and with `design.md` when changing layout, typography, color, cards, modals, or imagery stance.
 - Add `cursor-pointer` to clickable UI controls and interactive surfaces.
 - Use functional components and hooks; memoize derived collections with `useMemo` where relevant.
 - Split components when files grow past roughly 100 lines, especially under `src/components`.
@@ -37,7 +37,7 @@ Key requirements:
 ## Pull Request Checklist
 
 - [ ] Scope is focused and intentionally small.
-- [ ] UI follows `.cursor/rules/cocktail-app.mdc`.
+- [ ] UI changes follow `.cursor/rules/cocktail-app.mdc` and `design.md` (mark N/A if the PR does not touch UI).
 - [ ] `UI_AUDIT_CHECKLIST.md` has been fully reviewed.
 - [ ] `npm run build` succeeds locally.
 - [ ] Core smoke tests pass:

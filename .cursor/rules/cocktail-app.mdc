@@ -37,3 +37,4 @@ Professional, concise, and proactive. If a design or UX choice looks weak, name 
   - Data shape, recipe model, import/export behavior, or config contract changes.
   - Troubleshooting discoveries worth preserving for future contributors.
 - Do not over-update docs for trivial refactors that do not change behavior, workflow, or contributor expectations.
+- Major visual or information-architecture direction changes: update `design.md` and append a dated entry to `design-history.md` (see that file’s intro).

@@ -52,9 +52,11 @@ npm run preview
 
 Project UI and engineering conventions are documented in:
 
-- `.cursor/rules/cocktail-app.mdc`
+- `design.md` — visual direction, typography, palette, and layout constraints
+- `design-history.md` — past design pivots and context only (optional reading; `design.md` remains current)
+- `.cursor/rules/cocktail-app.mdc` — engineering conventions, accessibility affordance (`cursor-pointer` on clickable surfaces), component/hook guidance, and doc hygiene
 
-Use this for accessibility affordance (`cursor-pointer` on clickable surfaces), component/hook guidance, and current visual direction including occasional `#BB5143` accent usage.
+Use the Cursor rule for day-to-day implementation defaults; use `design.md` when making intentional visual changes or onboarding designers.
 
 ## Quality Checks
 
@@ -109,10 +111,4 @@ git push -u origin main
 
 ## UI Decisions
 
-Current card design choices (captured for future iterations):
-
-- Recipe cards use a vintage poker-card inspired visual style.
-- Card shape uses a tall rectangular playing-card silhouette.
-- Grid cards are expected to render at equal row heights.
-- No suit symbols are used; style is poker-inspired through frame, proportions, and typography.
-- Card palette is intentionally darker tobacco/parchment to stay cohesive with the dark page and modal surfaces.
+Card and surface choices evolve with the speakeasy editorial direction. Authoritative notes live in **`design.md`** (typography roles, `md:aspect-[5/7]` grid behavior, accent usage for `#BB5143`, and modal information architecture).

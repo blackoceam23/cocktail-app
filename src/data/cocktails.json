@@ -60,5 +60,20 @@
     "instructions": "Shake with ice and strain into a chilled glass. This creates a rounded, fruity drink where the tartness cuts the sweetness.",
     "notes": "Great with Japanese curry and Hua's mushrooms & Taiwan cabbage miso soup!",
     "noteAuthor": "Pha"
+  },
+  {
+    "name": "The Blood Orange Paloma",
+    "bases": [
+      "Tequila"
+    ],
+    "ingredients": [
+      "2 oz Tequila",
+      "1/2 oz Fresh Lime Juice",
+      "4 oz Sanpellegrino Aranciata Rossa (Blood Orange)",
+      "Coarse salt"
+    ],
+    "instructions": "Salt the rim of a Collins glass, add tequila and lime juice, then fill with ice. Top slowly with blood orange soda, gently lift once with a spoon to integrate, and garnish with a lime wheel.",
+    "notes": "Got the Sanpellegrino Aranciata Rossa from work and it's perfect for making cocktails!",
+    "noteAuthor": "Hua"
   }
 ]

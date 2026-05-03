@@ -5,21 +5,23 @@ export default function AddRecipeCard({ onOpen }) {
     <button
       type="button"
       onClick={onOpen}
-      className="group relative flex h-full min-h-[19rem] w-full cursor-pointer flex-col items-center justify-center overflow-hidden rounded-2xl border border-[#3A302B] bg-[linear-gradient(180deg,#201916_0%,#171311_100%)] p-3 text-center text-[#F3ECE7] shadow-[0_14px_30px_-18px_rgba(0,0,0,0.72)] transition-all duration-300 sm:min-h-[22rem] sm:p-4 md:aspect-[5/7] md:hover:-translate-y-0.5 md:hover:border-[#5A433A] md:hover:bg-[linear-gradient(180deg,#241c19_0%,#191412_100%)] md:hover:shadow-[0_20px_38px_-18px_rgba(0,0,0,0.86)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#BB5143]/45"
+      className="group relative flex h-full min-h-[19rem] w-full cursor-pointer flex-col overflow-hidden rounded-xl border border-[#26262F] border-dashed bg-[linear-gradient(135deg,#16161C_0%,#101014_100%)] p-5 text-left text-[#EEEDF2] shadow-[0_12px_28px_-16px_rgba(0,0,0,0.8)] transition-all duration-300 sm:min-h-[22rem] sm:p-6 md:aspect-[5/7] md:hover:-translate-y-2 md:hover:border-[#BB5143]/70 md:hover:bg-[linear-gradient(135deg,#1C1C24_0%,#131318_100%)] md:hover:shadow-[0_20px_44px_-12px_rgba(187,81,67,0.28)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#BB5143]/50"
     >
-      <span className="pointer-events-none absolute inset-2 rounded-xl border border-[#3A302B]/75" />
-      <span className="pointer-events-none absolute right-4 top-4 text-[10px] uppercase tracking-[0.18em] text-[#97877d]">
-        Custom
+      <span className="pointer-events-none absolute inset-y-0 left-0 w-[3px] rounded-l-xl bg-[#BB5143] opacity-30 transition-all duration-300 group-hover:w-[5px] group-hover:opacity-100" />
+
+      <span className="relative flex size-10 items-center justify-center rounded-lg border border-[#26262F] bg-[#1C1C24] text-[#6A6A7A] transition-all duration-300 md:group-hover:border-[#BB5143]/50 md:group-hover:bg-[#BB5143]/12 md:group-hover:text-[#BB5143]">
+        <Plus className="size-5" strokeWidth={1.75} aria-hidden />
       </span>
 
-      <span className="relative mb-3 flex size-12 items-center justify-center rounded-full border border-[#4A3A33] bg-[#191412] text-[#C8B9AF] transition-colors md:group-hover:border-[#BB5143]/60 md:group-hover:bg-[#BB5143]/10 md:group-hover:text-[#C86255]">
-        <Plus className="size-6" strokeWidth={1.75} aria-hidden />
+      <span className="relative flex min-h-0 flex-1 items-end px-2 pb-6 pt-8 sm:px-3 sm:pb-8 sm:pt-10">
+        <span className="font-display block text-balance text-[1.3rem] font-bold leading-[1.1] tracking-[-0.01em] text-[#EEEDF2] sm:text-[1.5rem] md:text-[1.65rem]">
+          Add House Special
+        </span>
       </span>
-      <span className="relative text-[1.25rem] font-semibold tracking-[0.01em] text-[#F3ECE7] sm:text-[1.5rem]">
-        Add House Special
-      </span>
-      <span className="relative mt-2 max-w-[12rem] text-[11px] text-[#97877d]">
-        Save a new menu entry on this device
+
+      <span className="pointer-events-none relative mx-2 block h-px w-[calc(100%-1rem)] bg-[#26262F]" />
+      <span className="relative mt-3 px-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#6A6A7A] transition-colors duration-300 group-hover:text-[#EEEDF2]">
+        Add Recipe →
       </span>
     </button>
   );

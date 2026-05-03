@@ -7,8 +7,8 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #120f0e;
-  color: #f3ece7;
+  background-color: #0c0c10;
+  color: #eeedf2;
   font-family:
     "Inter",
     "SF Pro Text",
@@ -24,6 +24,6 @@ body {
   min-height: 100vh;
 }
 
-.font-serif-title {
-  font-family: "Cormorant Garamond", ui-serif, Georgia, serif;
+.font-display {
+  font-family: "Syne", ui-sans-serif, system-ui, sans-serif;
 }

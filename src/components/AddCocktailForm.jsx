@@ -88,17 +88,17 @@ export default function AddCocktailForm({
     <form onSubmit={handleSubmit} className="space-y-5">
       {formError ? (
         <p
-          className="rounded-lg border border-[#BB5143]/45 bg-[#BB5143]/12 px-3 py-2 text-sm text-[#F3ECE7]"
+          className="rounded-lg border border-[#BB5143]/45 bg-[#BB5143]/12 px-3 py-2 text-sm text-[#EEEDF2]"
           role="alert"
         >
           {formError}
         </p>
       ) : null}
 
-      <div className="border-b border-[#352b27]/80 pb-4">
+      <div className="border-b border-[#26262F]/80 pb-4">
         <label
           htmlFor="recipe-name"
-          className="mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.16em] text-[#97877d]"
+          className="mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.18em] text-[#6A6A7A]"
         >
           Name
         </label>
@@ -110,23 +110,23 @@ export default function AddCocktailForm({
           aria-invalid={nameTaken || undefined}
           aria-describedby={nameTaken ? "recipe-name-hint" : undefined}
           className={[
-            "w-full rounded-lg border bg-[#1A1614] px-3 py-2 text-sm text-[#F3ECE7] placeholder:text-[#97877d] focus:outline-none focus:ring-1",
+            "w-full rounded-lg border bg-[#16161C] px-3 py-2 text-sm text-[#EEEDF2] placeholder:text-[#6A6A7A] focus:outline-none focus:ring-1",
             nameTaken
               ? "border-[#BB5143]/70 focus:border-[#BB5143]/70 focus:ring-[#BB5143]/35"
-              : "border-[#3A302B] focus:border-[#BB5143]/55 focus:ring-[#BB5143]/30",
+              : "border-[#26262F] focus:border-[#BB5143]/55 focus:ring-[#BB5143]/30",
           ].join(" ")}
           placeholder="e.g. Summer Spritz"
           autoComplete="off"
         />
         {nameTaken ? (
-          <p className="mt-2 text-sm text-[#C86255]" id="recipe-name-hint">
+          <p className="mt-2 text-sm text-[#BB5143]" id="recipe-name-hint">
             A recipe with this name already exists. Choose a different name.
           </p>
         ) : null}
       </div>
 
-      <fieldset className="border-b border-[#352b27]/80 pb-4">
-        <legend className="mb-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#97877d]">
+      <fieldset className="border-b border-[#26262F]/80 pb-4">
+        <legend className="mb-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#6A6A7A]">
           Base spirits
         </legend>
         <div className="flex flex-wrap gap-2">
@@ -136,10 +136,10 @@ export default function AddCocktailForm({
               <label
                 key={spirit}
                 className={[
-                  "cursor-pointer rounded-full border px-3 py-1.5 text-[11px] uppercase tracking-[0.12em] transition-colors",
+                  "cursor-pointer rounded-full border px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] transition-colors",
                   checked
-                    ? "border-[#BB5143]/75 bg-[#BB5143]/16 text-[#F3ECE7]"
-                    : "border-[#3A302B] bg-[#1A1614] text-[#C8B9AF] hover:border-[#4A3A33] hover:bg-[#2A2320]",
+                    ? "border-[#BB5143] bg-[#BB5143] text-white"
+                    : "border-[#26262F] bg-[#16161C] text-[#6A6A7A] hover:border-[#38383F] hover:bg-[#1C1C24] hover:text-[#EEEDF2]",
                 ].join(" ")}
               >
                 <input
@@ -158,7 +158,7 @@ export default function AddCocktailForm({
       <div>
         <label
           htmlFor="recipe-ingredients"
-          className="mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.16em] text-[#97877d]"
+          className="mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.18em] text-[#6A6A7A]"
         >
           Ingredients
         </label>
@@ -169,7 +169,7 @@ export default function AddCocktailForm({
             setForm((f) => ({ ...f, ingredientsText: e.target.value }))
           }
           rows={5}
-          className="w-full resize-y rounded-lg border border-[#3A302B] bg-[#1A1614] px-3 py-2 font-mono text-sm text-[#F3ECE7] placeholder:text-[#97877d] focus:border-[#BB5143]/55 focus:outline-none focus:ring-1 focus:ring-[#BB5143]/30"
+          className="w-full resize-y rounded-lg border border-[#26262F] bg-[#16161C] px-3 py-2 font-mono text-sm text-[#EEEDF2] placeholder:text-[#6A6A7A] focus:border-[#BB5143]/55 focus:outline-none focus:ring-1 focus:ring-[#BB5143]/30"
           placeholder={"One ingredient per line\n2 oz Gin\n1 oz Lemon juice"}
         />
       </div>
@@ -177,7 +177,7 @@ export default function AddCocktailForm({
       <div>
         <label
           htmlFor="recipe-instructions"
-          className="mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.16em] text-[#97877d]"
+          className="mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.18em] text-[#6A6A7A]"
         >
           Instructions
         </label>
@@ -186,7 +186,7 @@ export default function AddCocktailForm({
           value={form.instructions}
           onChange={(e) => setForm((f) => ({ ...f, instructions: e.target.value }))}
           rows={4}
-          className="w-full resize-y rounded-lg border border-[#3A302B] bg-[#1A1614] px-3 py-2 text-sm leading-relaxed text-[#F3ECE7] placeholder:text-[#97877d] focus:border-[#BB5143]/55 focus:outline-none focus:ring-1 focus:ring-[#BB5143]/30"
+          className="w-full resize-y rounded-lg border border-[#26262F] bg-[#16161C] px-3 py-2 text-sm leading-relaxed text-[#EEEDF2] placeholder:text-[#6A6A7A] focus:border-[#BB5143]/55 focus:outline-none focus:ring-1 focus:ring-[#BB5143]/30"
           placeholder="How to make it"
         />
       </div>
@@ -194,16 +194,16 @@ export default function AddCocktailForm({
       <div>
         <label
           htmlFor="recipe-notes"
-          className="mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.16em] text-[#97877d]"
+          className="mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.18em] text-[#6A6A7A]"
         >
-          Notes <span className="font-normal text-[#97877d]">(optional)</span>
+          Notes <span className="font-normal text-[#6A6A7A]">(optional)</span>
         </label>
         <textarea
           id="recipe-notes"
           value={form.notes}
           onChange={(e) => setForm((f) => ({ ...f, notes: e.target.value }))}
           rows={2}
-          className="w-full resize-y rounded-lg border border-[#3A302B] bg-[#1A1614] px-3 py-2 text-sm text-[#F3ECE7] placeholder:text-[#97877d] focus:border-[#BB5143]/55 focus:outline-none focus:ring-1 focus:ring-[#BB5143]/30"
+          className="w-full resize-y rounded-lg border border-[#26262F] bg-[#16161C] px-3 py-2 text-sm text-[#EEEDF2] placeholder:text-[#6A6A7A] focus:border-[#BB5143]/55 focus:outline-none focus:ring-1 focus:ring-[#BB5143]/30"
           placeholder="Personal tips, pairings…"
         />
       </div>
@@ -211,7 +211,7 @@ export default function AddCocktailForm({
       <div>
         <label
           htmlFor="recipe-note-author"
-          className="mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.16em] text-[#97877d]"
+          className="mb-1.5 block text-[11px] font-semibold uppercase tracking-[0.18em] text-[#6A6A7A]"
         >
           Note attribution
         </label>
@@ -219,7 +219,7 @@ export default function AddCocktailForm({
           id="recipe-note-author"
           value={form.noteAuthor}
           onChange={(e) => setForm((f) => ({ ...f, noteAuthor: e.target.value }))}
-          className="w-full rounded-lg border border-[#3A302B] bg-[#1A1614] px-3 py-2 text-sm text-[#F3ECE7] focus:border-[#BB5143]/55 focus:outline-none focus:ring-1 focus:ring-[#BB5143]/30"
+          className="w-full rounded-lg border border-[#26262F] bg-[#16161C] px-3 py-2 text-sm text-[#EEEDF2] focus:border-[#BB5143]/55 focus:outline-none focus:ring-1 focus:ring-[#BB5143]/30"
         >
           {NOTE_AUTHORS.map((a) => (
             <option key={a} value={a}>
@@ -233,14 +233,14 @@ export default function AddCocktailForm({
         <button
           type="submit"
           disabled={nameTaken}
-          className="cursor-pointer rounded-full border border-[#BB5143]/70 bg-[#BB5143]/18 px-6 py-2.5 text-sm font-medium text-[#F3ECE7] shadow-[0_12px_24px_-16px_rgba(187,81,67,0.65)] transition-colors hover:bg-[#BB5143]/28 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#BB5143]/45 disabled:pointer-events-none disabled:opacity-40"
+          className="cursor-pointer rounded-full border border-[#BB5143] bg-[#BB5143] px-6 py-2.5 text-sm font-semibold text-white shadow-[0_12px_24px_-16px_rgba(187,81,67,0.7)] transition-colors hover:bg-[#C86255] hover:border-[#C86255] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#BB5143]/50 disabled:pointer-events-none disabled:opacity-40"
         >
           Save recipe
         </button>
         <button
           type="button"
           onClick={onClose}
-          className="cursor-pointer rounded-full border border-[#3A302B] bg-[#1A1614] px-6 py-2.5 text-sm font-medium text-[#C8B9AF] transition-colors hover:border-[#4A3A33] hover:bg-[#2A2320] hover:text-[#F3ECE7] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#BB5143]/35"
+          className="cursor-pointer rounded-full border border-[#26262F] bg-[#16161C] px-6 py-2.5 text-sm font-semibold text-[#6A6A7A] transition-colors hover:border-[#38383F] hover:bg-[#1C1C24] hover:text-[#EEEDF2] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#BB5143]/35"
         >
           Cancel
         </button>
