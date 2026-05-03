@@ -65,6 +65,7 @@ There is currently no `lint` npm script in this repository.
 Before shipping changes:
 
 - Run `npm run build` to catch compile-time issues.
+- Before merging to `main`, consider `npm run tag:pre-merge` to save a snapshot tag of `origin/main` (see **Pre-merge snapshot tags** in `CONTRIBUTING.md`).
 - Run `npm run docs:check` when code/config behavior may require markdown updates.
 - Manually verify key UI flows (filtering, modal open/close, recipe add, export behavior).
 - Use `UI_AUDIT_CHECKLIST.md` for consistent UI review.

@@ -11,6 +11,32 @@ This project keeps changes intentionally small, readable, and visually consisten
 3. Self-review using the checklist in this document and `UI_AUDIT_CHECKLIST.md`.
 4. Run verification steps.
 5. Open a PR with a clear summary and test notes.
+6. **Before merging to `main`:** create a **pre-merge snapshot tag** so you can return to today’s `main` tip later (see [Pre-merge snapshot tags](#pre-merge-snapshot-tags)).
+
+## Pre-merge snapshot tags
+
+Right before you merge work into `main` (or right before you merge the PR on GitHub), tag **`origin/main`** and push the tag. That commit stays reachable under a memorable name (e.g. `v1.0-pre-visual-revamp`, `pre-merge-20260515-5d2baa`).
+
+**Automated helper (recommended):**
+
+```bash
+npm run tag:pre-merge
+```
+
+- With **no arguments**, the script proposes a tag like **`pre-merge-YYYYMMDD-<short-sha>`** (date + abbreviated commit), explains what it means, and asks you to **press Enter to accept**, **type a different tag name**, or **`n`** to abort—so the name stays understandable months later.
+- With a **short slug** (letters/numbers/hyphens), the suggestion becomes **`pre-merge-YYYYMMDD-<slug>`**, e.g. `npm run tag:pre-merge -- visual-revamp`.
+- To **skip the prompt** (CI or you’re sure): `npm run tag:pre-merge -- --yes` or `npm run tag:pre-merge -- --yes my-slug`.
+
+Override the ref to tag with **`MAIN_REF`** (default `origin/main`), e.g. `MAIN_REF=origin/develop npm run tag:pre-merge`.
+
+**Working with Cursor:** If you did not pass a tag name, ask the assistant to run `npm run tag:pre-merge` (or to propose a name in the `pre-merge-…` / `v…-pre-…` style), **confirm the suggested tag in chat**, then run the script or `git tag` / `git push` accordingly.
+
+**Recover later:**
+
+```bash
+git fetch origin --tags
+git checkout -b recover-<short-reason> <tag-name>
+```
 
 ## Development Commands
 
